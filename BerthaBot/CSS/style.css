@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin-ext');
+
+#sidebar{
+	transition:width 0.3s;
+}
+
+#input, .story-holder, #saved{
+  transition:left 0.3s;
+}
+
+#loader-container{
+  width: 100%;
+}
+
+#loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-notice {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.loader {
+  position: relative;
+  left: calc(50% - 16px);
+  top: 75px;
+  margin-top: -32px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(0, 0, 0, 0.2);
+  border-top-color: #5d5d5d;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+  transition: opacity 0.2s;
+}
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
+}
+
+
+
+#background::before {
+  content: " ";
+  position: fixed;
+  background: rgba(0,0,0,0.6);
+  left: 0em;
+  right: 0em;
+  top: 0em;
+  bottom: 0em;
+}
